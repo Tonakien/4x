@@ -67,7 +67,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameControls.cs" />
-    <Compile Include="Assets\Scripts\GameClassManager.cs" />
+    <Compile Include="Assets\ModifiersManager.cs" />
+    <Compile Include="Assets\PlanetManager.cs" />
+    <Compile Include="Assets\Scripts\Classes\EmptyClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\FleetClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\GameClassManager.cs" />
+    <Compile Include="Assets\Scripts\Classes\HeroClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\ImperiumClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\PlanetClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\PlanetarryProjectClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\ShipModulesClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\ShipsClasses.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ModifiersEffectCalculator.cs" />
   </ItemGroup>
