@@ -103,6 +103,8 @@ public class ImperiumPlanet: MapPlanet
 
 
 
+
+
     public float science;
     public float supply;
     public float income;
