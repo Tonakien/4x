@@ -4,7 +4,7 @@ using System.Collections;
 public class ModifiersManager : MonoBehaviour {
 
 
-       public void UpdatePlanetByModifier(ImperiumPlanet planet, BaseModifier modifier) // обработка модификаторов планет
+       public void UpdatePlanetByModifier(Colony planet, BaseModifier modifier) // обработка модификаторов планет
     {
         if (modifier.effectType == "PLANET_PRODUCTION_BY_POPULATION" && modifier.applyType == "PLANET")
         {

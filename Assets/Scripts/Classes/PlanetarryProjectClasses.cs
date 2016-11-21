@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
-public class PlanetaryProject //базовый класс для хранения в словаре проектов
+public class ColonyProject //базовый класс для хранения в словаре проектов
 {
     public string name;
     public int infrastructureLevel;
@@ -14,13 +14,13 @@ public class PlanetaryProject //базовый класс для хранени�
     public float baseUpkeepSupply;
     public float baseUpkeepIncome;
     public float startThreshold;
-    public BaseModifier outcomeModifierType;
+    public BaseModifier projectModifier;
 
 }
 
-public class LocalPlanetaryProject : PlanetaryProject
+public class LocalColonyProject : ColonyProject
 {
-    public ImperiumPlanet owner;
+    public Colony owner;
     public float currentCompleteness;
     public float currentUpkeepProduction;
     public float currentUpkeepScience;

@@ -1,17 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using System;
 
 public class PlanetManager : MonoBehaviour {
 
-    public ModifiersManager modifierManager;
+    public ModifierManager modifierManager;
 
-    public void UpdatePlanetTotalProductivity(ImperiumPlanet Planet) // функция апдейта 4х главных параметров планеты. Включает апдейт модификаторов.
-    {
-        UpdateZoneModifires(Planet);
-        UpdatePlanetProductivity(Planet);
-    }
-
-    private void UpdatePlanetProductivity(ImperiumPlanet Planet)
+    // полный апдейт всего производства планеты
+    public void UpdatePlanetProductivity(Colony Planet)
     {
         // Обнуление для пересчета
         Planet.production = 0;
@@ -19,52 +17,38 @@ public class PlanetManager : MonoBehaviour {
         Planet.supply = 0;
         Planet.income = 0;
 
-        foreach (var PlanetZone in Planet.PlanetZonesList.Values) // добавление значений из планетарных зон в саму планету
-        {
-            if (PlanetZone.owner == Planet.planetOwner) //Проверка принадлежности зоны
-            {
-                Planet.production += PlanetZone.minerals;
-                Planet.science += PlanetZone.science;
-                Planet.supply += PlanetZone.supply;
-                Planet.income += PlanetZone.income;
-            }
-        }
-
         // Прибавление инфраструктурного уровня к продакшену
         Planet.production += Planet.planetInfrastructureLevel;
         Planet.science += Planet.planetInfrastructureLevel;
         Planet.supply += Planet.planetInfrastructureLevel;
         Planet.income += Planet.planetInfrastructureLevel;
 
-        foreach (var modifier in Planet.PlanetZoneModifiersList.Values) // обработка данных по эффектам от зон
+        //апдейт того что дают зоны
+        foreach (var zone in Planet.PlanetZonesList)
         {
-            if (modifier.applyType == "PLANET")
-            {
-                modifierManager.UpdatePlanetByModifier(Planet, modifier);
-            }
+            Planet.production += zone.minerals;
+            Planet.science += zone.science;
+            Planet.supply += zone.supply;
+            Planet.income += zone.income;
 
+            // прибавление эффектов зон
+            modifierManager.UpdatePlanetByModifier(Planet, zone.zoneModifier);
         }
 
-        foreach (var modifier in Planet.PlanetImperiumModifiersList.Values) // обработка данных по эффектам от Империи
+        //апдейт того что дают постройки
+        foreach (var project in Planet.ColonyProjectsList)
         {
-            if (modifier.applyType == "PLANET")
-            {
-                modifierManager.UpdatePlanetByModifier(Planet, modifier);
-            }
-
+            modifierManager.UpdatePlanetByModifier(Planet, project.projectModifier);
         }
+
+        //апдейт того что дает сектор
+        foreach (var modifier in Planet.parentSector.SectorModifiersList)
+        {
+            modifierManager.UpdatePlanetByModifier(Planet, modifier);
+        }
+
     }
 
 
-    private void UpdateZoneModifires(ImperiumPlanet Planet) //собирает все базовые модификаторы с разработаных зон и складывает в планету
-    {
-        Planet.PlanetZoneModifiersList.Clear();
-        foreach (var PlanetZone in Planet.PlanetZonesList.Values)
-        {
-            if (PlanetZone.owner == Planet.planetOwner) //Проверка на принадлежность
-            {
-                Planet.PlanetZoneModifiersList.Add(PlanetZone.name, PlanetZone.zoneModifier);
-            }
-        }
-    }
+ 
 }

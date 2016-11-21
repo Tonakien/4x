@@ -67,17 +67,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameControls.cs" />
+    <Compile Include="Assets\ModifierManager.cs" />
     <Compile Include="Assets\ModifiersManager.cs" />
     <Compile Include="Assets\PlanetManager.cs" />
-    <Compile Include="Assets\Scripts\Classes\EmptyClasses.cs" />
     <Compile Include="Assets\Scripts\Classes\FleetClasses.cs" />
     <Compile Include="Assets\Scripts\Classes\GameClassManager.cs" />
-    <Compile Include="Assets\Scripts\Classes\HeroClasses.cs" />
-    <Compile Include="Assets\Scripts\Classes\ImperiumClasses.cs" />
-    <Compile Include="Assets\Scripts\Classes\PlanetClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\Hero\Hero.cs" />
+    <Compile Include="Assets\Scripts\Classes\Hero\HeroAbility.cs" />
+    <Compile Include="Assets\Scripts\Classes\Hero\ImperiumHero.cs" />
+    <Compile Include="Assets\Scripts\Classes\Imperium\Imperium.cs" />
+    <Compile Include="Assets\Scripts\Classes\Imperium\ImperiumSector.cs" />
+    <Compile Include="Assets\Scripts\Classes\Planet\Colony.cs" />
+    <Compile Include="Assets\Scripts\Classes\Planet\MapPlanet.cs" />
+    <Compile Include="Assets\Scripts\Classes\Planet\PlanetBiomeType.cs" />
+    <Compile Include="Assets\Scripts\Classes\Planet\PlanetGravityType.cs" />
+    <Compile Include="Assets\Scripts\Classes\Planet\PlanetSizeType.cs" />
+    <Compile Include="Assets\Scripts\Classes\Planet\PlanetZone.cs" />
     <Compile Include="Assets\Scripts\Classes\PlanetarryProjectClasses.cs" />
-    <Compile Include="Assets\Scripts\Classes\ShipModulesClasses.cs" />
-    <Compile Include="Assets\Scripts\Classes\ShipsClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship modules\ShipDefenceModule.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship modules\ShipFTLPropulsionModule.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship modules\ShipManuveringModule.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship modules\ShipModule.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship modules\ShipSensorModule.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship modules\ShipSpecialModule.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship modules\ShipSupplyModule.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship modules\ShipWeaponModule.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship\Ship.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship\ShipConstruction.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship\ShipProject.cs" />
+    <Compile Include="Assets\Scripts\Classes\Ship\ShipType.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ModifiersEffectCalculator.cs" />
   </ItemGroup>
