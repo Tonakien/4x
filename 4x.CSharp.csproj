@@ -64,13 +64,20 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameControls.cs" />
     <Compile Include="Assets\ModifierManager.cs" />
     <Compile Include="Assets\ModifiersManager.cs" />
     <Compile Include="Assets\PlanetManager.cs" />
-    <Compile Include="Assets\Scripts\Classes\FleetClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\Fleet\Fleet.cs" />
+    <Compile Include="Assets\Scripts\Classes\Fleet\TacticGroup.cs" />
     <Compile Include="Assets\Scripts\Classes\GameClassManager.cs" />
     <Compile Include="Assets\Scripts\Classes\Hero\Hero.cs" />
     <Compile Include="Assets\Scripts\Classes\Hero\HeroAbility.cs" />
@@ -83,7 +90,8 @@
     <Compile Include="Assets\Scripts\Classes\Planet\PlanetGravityType.cs" />
     <Compile Include="Assets\Scripts\Classes\Planet\PlanetSizeType.cs" />
     <Compile Include="Assets\Scripts\Classes\Planet\PlanetZone.cs" />
-    <Compile Include="Assets\Scripts\Classes\PlanetarryProjectClasses.cs" />
+    <Compile Include="Assets\Scripts\Classes\PlanetaryProject\ColonyProject.cs" />
+    <Compile Include="Assets\Scripts\Classes\PlanetaryProject\LocalColonyProject.cs" />
     <Compile Include="Assets\Scripts\Classes\Ship modules\ShipDefenceModule.cs" />
     <Compile Include="Assets\Scripts\Classes\Ship modules\ShipFTLPropulsionModule.cs" />
     <Compile Include="Assets\Scripts\Classes\Ship modules\ShipManuveringModule.cs" />

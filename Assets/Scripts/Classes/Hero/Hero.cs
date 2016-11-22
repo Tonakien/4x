@@ -8,5 +8,5 @@ public class Hero
 {
     public string name;
     public string type;
-    public Dictionary<string, HeroAbility> AbilitiessList = new Dictionary<string, HeroAbility>();
+    public List<HeroAbility> AbilitiesList;
 }

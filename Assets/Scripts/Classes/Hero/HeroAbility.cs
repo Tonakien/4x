@@ -6,5 +6,6 @@ using System;
 
 public class HeroAbility
 {
-
+    public string name;
+    public BaseModifier abilityModifier;
 }

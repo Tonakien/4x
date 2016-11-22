@@ -7,4 +7,5 @@ using System;
 public class ImperiumHero : Hero
 {
     public string position;
+    public int age;
 }

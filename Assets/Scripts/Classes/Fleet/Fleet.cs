@@ -6,5 +6,5 @@ using System;
 
 public class Fleet
 {
-
+    public List<Ship> ShipList;
 }

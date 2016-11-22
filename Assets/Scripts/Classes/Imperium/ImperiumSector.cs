@@ -11,4 +11,5 @@ public class ImperiumSector
     public string name;
     public Imperium owner;
     public ImperiumHero heroManager;
+    public List<Fleet> FleetsList;
 }

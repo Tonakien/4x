@@ -11,6 +11,7 @@ public class PlanetManager : MonoBehaviour {
     // полный апдейт всего производства планеты
     public void UpdatePlanetProductivity(Colony Planet)
     {
+
         // Обнуление для пересчета
         Planet.production = 0;
         Planet.science = 0;
@@ -30,25 +31,13 @@ public class PlanetManager : MonoBehaviour {
             Planet.science += zone.science;
             Planet.supply += zone.supply;
             Planet.income += zone.income;
-
-            // прибавление эффектов зон
-            modifierManager.UpdatePlanetByModifier(Planet, zone.zoneModifier);
         }
 
-        //апдейт того что дают постройки
-        foreach (var project in Planet.ColonyProjectsList)
-        {
-            modifierManager.UpdatePlanetByModifier(Planet, project.projectModifier);
-        }
+        // апдейт того что дают модификаторы применительно к данной планете
+        modifierManager.UpdatePlanetByModifier(Planet);
 
-        //апдейт того что дает сектор
-        foreach (var modifier in Planet.parentSector.SectorModifiersList)
-        {
-            modifierManager.UpdatePlanetByModifier(Planet, modifier);
-        }
+
 
     }
-
-
  
 }
