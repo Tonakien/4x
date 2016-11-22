@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
+[Serializable]
 public class PlanetGravityType
 {
     public string name;

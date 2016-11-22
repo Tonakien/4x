@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
+[Serializable]
 public class ColonyProject
 {
     public string name;
@@ -16,6 +17,6 @@ public class ColonyProject
     public float baseUpkeepSupply;
     public float baseUpkeepIncome;
     public float startThreshold;
-    public List<BaseModifier> projectModifiersList;
+    public List<BaseModifier> projectModifiersList = new List<BaseModifier>();
 
 }

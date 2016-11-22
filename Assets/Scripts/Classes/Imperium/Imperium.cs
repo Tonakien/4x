@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
+[Serializable]
 public class Imperium
 {
     public string id;
     public string name;
-    public Dictionary<string, ImperiumSector> SectorsList = new Dictionary<string, ImperiumSector>();
-    public List<BaseModifier> ImperiumModifiersList;
+    public List<ImperiumSector> SectorsList = new List<ImperiumSector>();
+    public List<BaseModifier> ImperiumModifiersList = new List<BaseModifier>();
     public ImperiumHero heroRuler;
-    public List<Hero> HeroesPull;
+    public List<Hero> HeroesPull = new List<Hero>();
     public enum playingType
     {
         Player,

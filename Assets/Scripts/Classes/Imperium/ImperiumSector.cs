@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
+[Serializable]
 public class ImperiumSector
 {
-    public Dictionary<string, Colony> PlanetsList = new Dictionary<string, Colony>();
+    public List<Colony> PlanetsList = new List<Colony>();
     public List<BaseModifier> SectorModifiersList;
     public string name;
     public Imperium owner;

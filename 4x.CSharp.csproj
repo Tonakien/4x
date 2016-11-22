@@ -64,15 +64,20 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\plugins\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="4x.CSharp.Plugins.csproj">
+      <Project>{6D33D8D6-07D4-5C6F-C64F-0CA3FCD74D86}</Project>
+      <Name>4x.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\GameControls.cs" />
+    <Compile Include="Assets\GameData.cs" />
+    <Compile Include="Assets\LibraryAssembler.cs" />
     <Compile Include="Assets\ModifierManager.cs" />
     <Compile Include="Assets\ModifiersManager.cs" />
     <Compile Include="Assets\PlanetManager.cs" />
@@ -104,6 +109,7 @@
     <Compile Include="Assets\Scripts\Classes\Ship\ShipConstruction.cs" />
     <Compile Include="Assets\Scripts\Classes\Ship\ShipProject.cs" />
     <Compile Include="Assets\Scripts\Classes\Ship\ShipType.cs" />
+    <Compile Include="Assets\Scripts\CustomEditors\LibraryAssemblerEditor.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ModifiersEffectCalculator.cs" />
   </ItemGroup>

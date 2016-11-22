@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
+[Serializable]
 public class ShipProject
 {
     public string shipProjectName;
@@ -17,11 +18,11 @@ public class ShipProject
     public float baseFTLSpeed;
     public float baseManuverSpeed;
     public ShipConstruction shipConstruction;
-    public Dictionary<string, ShipWeaponModule> WeaponsList = new Dictionary<string, ShipWeaponModule>();
-    public Dictionary<string, ShipDefenceModule> DefenceList = new Dictionary<string, ShipDefenceModule>();
-    public Dictionary<string, ShipFTLPropulsionModule> FTLPropulsionsList = new Dictionary<string, ShipFTLPropulsionModule>();
-    public Dictionary<string, ShipManuveringModule> ManuveringsList = new Dictionary<string, ShipManuveringModule>();
-    public Dictionary<string, ShipSupplyModule> SupplysList = new Dictionary<string, ShipSupplyModule>();
-    public Dictionary<string, ShipSensorModule> SensorsList = new Dictionary<string, ShipSensorModule>();
-    public Dictionary<string, ShipSpecialModule> SpecialsList = new Dictionary<string, ShipSpecialModule>();
+    public List<ShipWeaponModule> WeaponsList = new List<ShipWeaponModule>();
+    public List<ShipDefenceModule> DefenceList = new List<ShipDefenceModule>();
+    public List<ShipFTLPropulsionModule> FTLPropulsionsList = new List<ShipFTLPropulsionModule>();
+    public List<ShipManuveringModule> ManuveringsList = new List<ShipManuveringModule>();
+    public List<ShipSupplyModule> SupplysList = new List<ShipSupplyModule>();
+    public List<ShipSensorModule> SensorsList = new List<ShipSensorModule>();
+    public List<ShipSpecialModule> SpecialsList = new List<ShipSpecialModule>();
 }

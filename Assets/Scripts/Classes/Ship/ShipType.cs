@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
+[Serializable]
 public class ShipType
 {
     public string name;
@@ -18,5 +19,5 @@ public class ShipType
     public float supplyWeightFromType;
     public float sensorWeightFromType;
     public float specialWeightFromType;
-    public Dictionary<string, BaseModifier> ShipClassModifiersList = new Dictionary<string, BaseModifier>();
+    public List<BaseModifier> ShipClassModifiersList = new List<BaseModifier>();
 }

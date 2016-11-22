@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
+[Serializable]
 public class ShipFTLPropulsionModule: ShipModule
 {
     public float value;
